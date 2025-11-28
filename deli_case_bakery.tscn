@@ -1,0 +1,174 @@
+[gd_scene load_steps=12 format=3 uid="uid://ccht6un5ymopo"]
+
+[ext_resource type="Script" uid="uid://cxk54wv3q425b" path="res://deli_case_bakery.gd" id="1_ihey8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m0vbu"]
+albedo_color = Color(0.17254902, 0.09411765, 0.0627451, 1)
+metallic = 0.2
+roughness = 0.6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wk0h0"]
+albedo_color = Color(0.9098039, 0.9098039, 0.9098039, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ymlho"]
+albedo_color = Color(0.9098039, 0.9098039, 0.9098039, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_di5lt"]
+transparency = 1
+albedo_color = Color(0.8156863, 0.9098039, 0.9411765, 0)
+metallic = 0.1
+roughness = 0.02
+refraction_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_paa5y"]
+transparency = 1
+albedo_color = Color(0.8156863, 0.9098039, 0.9411765, 0)
+metallic = 0.1
+roughness = 0.02
+refraction_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2lrcq"]
+albedo_color = Color(0.627451, 0.627451, 0.627451, 1)
+metallic = 0.95
+roughness = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gsrpd"]
+albedo_color = Color(0.627451, 0.627451, 0.627451, 1)
+metallic = 0.95
+roughness = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ha3cb"]
+albedo_color = Color(0.627451, 0.627451, 0.627451, 1)
+metallic = 0.95
+roughness = 0.2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w2tct"]
+size = Vector3(1.2, 0.8, 6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_773w3"]
+size = Vector3(1.3, 0.05, 6)
+
+[node name="DeliCase_Bakery" type="Node3D"]
+script = ExtResource("1_ihey8")
+
+[node name="Cabinet_Base" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+size = Vector3(1.2, 0.8, 6)
+material = SubResource("StandardMaterial3D_m0vbu")
+
+[node name="Interior_Bottom" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.82, 0)
+size = Vector3(1.1, 0.03, 5.8)
+
+[node name="BackWall" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55, 1, 0)
+size = Vector3(0.1, 0.4, 6)
+material = SubResource("StandardMaterial3D_wk0h0")
+
+[node name="FrontWall" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55, 0.95, 0)
+size = Vector3(0.1, 0.3, 6)
+material = SubResource("StandardMaterial3D_ymlho")
+
+[node name="LeftEnd" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -2.95)
+size = Vector3(1.1, 0.4, 0.1)
+
+[node name="RightEnd" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2.95)
+size = Vector3(1.1, 0.4, 0.1)
+
+[node name="Divider_1" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.975, -2.4)
+size = Vector3(1, 0.35, 0.05)
+
+[node name="Divider_2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.975, -1.2)
+size = Vector3(1, 0.35, 0.05)
+
+[node name="Divider_3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.975, 0)
+size = Vector3(1, 0.35, 0.05)
+
+[node name="Divider_4" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.975, 1.2)
+size = Vector3(1, 0.35, 0.05)
+
+[node name="Divider_5" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.975, 2.4)
+size = Vector3(1, 0.35, 0.05)
+
+[node name="Glass_Top" type="CSGBox3D" parent="."]
+transform = Transform3D(0.9396926, 0.34202012, 0, -0.34202012, 0.9396926, 0, 0, 0, 1, 0.15, 1.25, 0)
+size = Vector3(1.3, 0.05, 6)
+material = SubResource("StandardMaterial3D_di5lt")
+
+[node name="Glass_Front" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 1.05, 0)
+size = Vector3(0.05, 0.2, 6)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="MetalRail_Front" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 1.2, 0)
+size = Vector3(0.05, 0.05, 6)
+material = SubResource("StandardMaterial3D_2lrcq")
+
+[node name="MetalRail_Back" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55, 1.2, 0)
+size = Vector3(0.05, 0.05, 6)
+material = SubResource("StandardMaterial3D_gsrpd")
+
+[node name="SideRail_Left" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, -2.97)
+size = Vector3(1.2, 0.05, 0.05)
+material = SubResource("StandardMaterial3D_ha3cb")
+
+[node name="SideRail_Right" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 2.97)
+size = Vector3(1.2, 0.05, 0.05)
+material = SubResource("StandardMaterial3D_ha3cb")
+
+[node name="Collision" type="StaticBody3D" parent="."]
+
+[node name="Cabinet_Collision" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("BoxShape3D_w2tct")
+
+[node name="Glass_Collision" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(0.9396926, 0.34202012, 0, -0.34202012, 0.9396926, 0, 0, 0, 1, 0.15, 1.25, 0)
+shape = SubResource("BoxShape3D_773w3")
+
+[node name="SpawnPoints" type="Node3D" parent="."]
+
+[node name="Spawn_Section1_01" type="Marker3D" parent="SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.88, -2.4)
+
+[node name="Spawn_Section1_02" type="Marker3D" parent="SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.88, -2.4)
+
+[node name="Spawn_Section1_03" type="Marker3D" parent="SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.88, -2)
+
+[node name="Spawn_Section1_04" type="Marker3D" parent="SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.88, -2)
+
+[node name="LED_Strip" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, -0.5, 1.15, 0)
+light_color = Color(1, 0.99607843, 0.9411765, 1)
+light_energy = 1.2
+spot_range = 1.5
+spot_angle = 60.0
+
+[node name="LED_Strip2" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, -0.5, 1.15, -2)
+light_color = Color(1, 0.99607843, 0.9411765, 1)
+light_energy = 1.2
+spot_range = 1.5
+spot_angle = 60.0
+
+[node name="LED_Strip3" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, -0.5, 1.15, 2)
+light_color = Color(1, 0.99607843, 0.9411765, 1)
+light_energy = 1.2
+spot_range = 1.5
+spot_angle = 60.0

@@ -1,0 +1,170 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2lkmllv34bvw"]
+
+[ext_resource type="Script" uid="uid://i3fqxawrksts" path="res://shelf.gd" id="1_v1ftn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_22d2w"]
+albedo_color = Color(0.627451, 0.50980395, 0.42745098, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m0vbu"]
+size = Vector3(1.2, 0.05, 12)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wk0h0"]
+size = Vector3(1.2, 3, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ymlho"]
+size = Vector3(0.05, 3, 12)
+
+[node name="Shelf_Pasta_DoubleAisle" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+script = ExtResource("1_v1ftn")
+
+[node name="Row1_Bottom" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03, 0)
+size = Vector3(1.2, 0.05, 12)
+material = SubResource("StandardMaterial3D_22d2w")
+
+[node name="Row2_Waist" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
+size = Vector3(1.2, 0.05, 12)
+material = SubResource("StandardMaterial3D_22d2w")
+
+[node name="Row3_Eye" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)
+size = Vector3(1.2, 0.05, 12)
+material = SubResource("StandardMaterial3D_22d2w")
+
+[node name="Row4_Top" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+size = Vector3(1.2, 0.05, 12)
+material = SubResource("StandardMaterial3D_22d2w")
+
+[node name="BackPanel" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+size = Vector3(0.03, 3, 12)
+material = SubResource("StandardMaterial3D_22d2w")
+
+[node name="Post_01_Left" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55, 1.5, -6)
+size = Vector3(0.1, 3, 0.1)
+material = SubResource("StandardMaterial3D_22d2w")
+
+[node name="Post_02" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55, 1.5, -4)
+size = Vector3(0.1, 3, 0.1)
+material = SubResource("StandardMaterial3D_22d2w")
+
+[node name="Post_03" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55, 1.5, -2)
+size = Vector3(0.1, 3, 0.1)
+material = SubResource("StandardMaterial3D_22d2w")
+
+[node name="Post_04" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55, 1.5, 0)
+size = Vector3(0.1, 3, 0.1)
+material = SubResource("StandardMaterial3D_22d2w")
+
+[node name="Post_05" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55, 1.5, 2)
+size = Vector3(0.1, 3, 0.1)
+material = SubResource("StandardMaterial3D_22d2w")
+
+[node name="Post_06" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55, 1.5, 4)
+size = Vector3(0.1, 3, 0.1)
+material = SubResource("StandardMaterial3D_22d2w")
+
+[node name="Post_07_Right" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55, 1.5, 6)
+size = Vector3(0.1, 3, 0.1)
+material = SubResource("StandardMaterial3D_22d2w")
+
+[node name="Post_01_Left2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55, 1.5, -6)
+size = Vector3(0.1, 3, 0.1)
+material = SubResource("StandardMaterial3D_22d2w")
+
+[node name="Post_07" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55, 1.5, -4)
+size = Vector3(0.1, 3, 0.1)
+material = SubResource("StandardMaterial3D_22d2w")
+
+[node name="Post_08" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55, 1.5, -2)
+size = Vector3(0.1, 3, 0.1)
+material = SubResource("StandardMaterial3D_22d2w")
+
+[node name="Post_09" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55, 1.5, 0)
+size = Vector3(0.1, 3, 0.1)
+material = SubResource("StandardMaterial3D_22d2w")
+
+[node name="Post_10" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55, 1.5, 2)
+size = Vector3(0.1, 3, 0.1)
+material = SubResource("StandardMaterial3D_22d2w")
+
+[node name="Post_11" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55, 1.5, 4)
+size = Vector3(0.1, 3, 0.1)
+material = SubResource("StandardMaterial3D_22d2w")
+
+[node name="Post_07_Right2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55, 1.5, 6)
+size = Vector3(0.1, 3, 0.1)
+material = SubResource("StandardMaterial3D_22d2w")
+
+[node name="Collision" type="StaticBody3D" parent="."]
+
+[node name="Row1_Collision" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03, 0)
+shape = SubResource("BoxShape3D_m0vbu")
+
+[node name="Row2_Collision" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
+shape = SubResource("BoxShape3D_m0vbu")
+
+[node name="Row3_Collision" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)
+shape = SubResource("BoxShape3D_m0vbu")
+
+[node name="Row4_Collision" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+shape = SubResource("BoxShape3D_m0vbu")
+
+[node name="EndCap_Left" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -6)
+shape = SubResource("BoxShape3D_wk0h0")
+
+[node name="EndCap_Right" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 6)
+shape = SubResource("BoxShape3D_wk0h0")
+
+[node name="BackPanelCollision" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.76, 0)
+shape = SubResource("BoxShape3D_ymlho")
+
+[node name="SpawnPoints" type="Node3D" parent="."]
+
+[node name="Spawn_Pasta_1" type="Marker3D" parent="SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.1, -2.5)
+gizmo_extents = 0.2
+
+[node name="Spawn_Pasta_2" type="Marker3D" parent="SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.1, -1.5)
+gizmo_extents = 0.2
+
+[node name="Spawn_Pasta_3" type="Marker3D" parent="SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.1, -0.5)
+gizmo_extents = 0.2
+
+[node name="Spawn_Pasta_4" type="Marker3D" parent="SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.1, 0.5)
+gizmo_extents = 0.2
+
+[node name="Spawn_Pasta_5" type="Marker3D" parent="SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.1, 1.5)
+gizmo_extents = 0.2
+
+[node name="Spawn_Pasta_6" type="Marker3D" parent="SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.1, 2.5)
+gizmo_extents = 0.2

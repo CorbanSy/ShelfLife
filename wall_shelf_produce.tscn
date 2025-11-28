@@ -1,0 +1,111 @@
+[gd_scene load_steps=9 format=3 uid="uid://cvjpq7pn6ecdo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_00fh1"]
+albedo_color = Color(0.9607843, 0.9607843, 0.8627451, 1)
+roughness = 0.7
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bt25u"]
+albedo_color = Color(0.8235294, 0.7058824, 0.54901963, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8fqco"]
+albedo_color = Color(0.8235294, 0.7058824, 0.54901963, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v17o5"]
+albedo_color = Color(0.8235294, 0.7058824, 0.54901963, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_avusw"]
+albedo_color = Color(0.8235294, 0.7058824, 0.54901963, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t4ec1"]
+albedo_color = Color(0.4117647, 0.4117647, 0.4117647, 1)
+metallic = 0.8
+roughness = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sw4dm"]
+albedo_color = Color(0.18431373, 0.30980393, 0.30980393, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2lf22"]
+size = Vector3(0.8, 2, 8)
+
+[node name="WallShelfProduce" type="Node3D"]
+
+[node name="BackPanel" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.15, 0)
+size = Vector3(0.1, 2.3, 8)
+material = SubResource("StandardMaterial3D_00fh1")
+
+[node name="Shelf1_Bottom" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35, 0.3, 0)
+size = Vector3(0.7, 0.05, 7.8)
+material = SubResource("StandardMaterial3D_bt25u")
+
+[node name="Shelft1_Lip" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0.36260214, 0)
+size = Vector3(0.05, 0.15, 7.8)
+material = SubResource("StandardMaterial3D_8fqco")
+
+[node name="Shelf2_LowerMid" type="CSGBox3D" parent="."]
+transform = Transform3D(0.9848077, 0.17364818, 0, -0.17364818, 0.9848077, 0, 0, 0, 1, 0.3, 0.7, 0)
+size = Vector3(0.6, 0.05, 7.8)
+material = SubResource("StandardMaterial3D_v17o5")
+
+[node name="Shelf2_Lip" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0.70750743, 0)
+size = Vector3(0.05, 0.15, 7.8)
+material = SubResource("StandardMaterial3D_avusw")
+
+[node name="Shelf3_UpperMid" type="CSGBox3D" parent="."]
+transform = Transform3D(0.96592575, 0.258819, 0, -0.258819, 0.96592575, 0, 0, 0, 1, 0.25, 1.1, 0)
+size = Vector3(0.5, 0.05, 7.8)
+material = SubResource("StandardMaterial3D_v17o5")
+
+[node name="Shelf3_Lip" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.0974448, 0)
+size = Vector3(0.05, 0.15, 7.8)
+material = SubResource("StandardMaterial3D_avusw")
+
+[node name="Shelf4_Top" type="CSGBox3D" parent="."]
+transform = Transform3D(0.9396925, 0.3420201, 0, -0.3420201, 0.9396925, 0, 0, 0, 1, 0.2, 1.5, 0)
+size = Vector3(0.4, 0.05, 7.8)
+material = SubResource("StandardMaterial3D_v17o5")
+
+[node name="Shelf4_Lip" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 1.4929653, 0)
+size = Vector3(0.05, 0.15, 7.8)
+material = SubResource("StandardMaterial3D_avusw")
+
+[node name="Bracket_Left" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05, 0.9, -3.8)
+size = Vector3(0.15, 1.8, 0.1)
+material = SubResource("StandardMaterial3D_t4ec1")
+
+[node name="Bracket_CenterLeft" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05, 0.9, -1.9)
+size = Vector3(0.15, 1.8, 0.1)
+material = SubResource("StandardMaterial3D_t4ec1")
+
+[node name="Bracket_Center" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05, 0.9, 0)
+size = Vector3(0.15, 1.8, 0.1)
+material = SubResource("StandardMaterial3D_t4ec1")
+
+[node name="Bracket_CenterRight" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05, 0.9, 1.9)
+size = Vector3(0.15, 1.8, 0.1)
+material = SubResource("StandardMaterial3D_t4ec1")
+
+[node name="Bracket_Right" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05, 0.9, 3.8)
+size = Vector3(0.15, 1.8, 0.1)
+material = SubResource("StandardMaterial3D_t4ec1")
+
+[node name="Base_Platform" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35, 0.15, 0)
+size = Vector3(0.7, 0.3, 8)
+material = SubResource("StandardMaterial3D_sw4dm")
+
+[node name="Collision" type="StaticBody3D" parent="."]
+
+[node name="MainCollision" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35, 1, 0)
+shape = SubResource("BoxShape3D_2lf22")

@@ -1,0 +1,408 @@
+[gd_scene load_steps=20 format=3 uid="uid://xn45xknfiyi7"]
+
+[ext_resource type="PackedScene" uid="uid://c2lkmllv34bvw" path="res://shelf_1.tscn" id="1_h0v27"]
+[ext_resource type="PackedScene" uid="uid://ccht6un5ymopo" path="res://deli_case_bakery.tscn" id="2_22d2w"]
+[ext_resource type="PackedScene" uid="uid://cvjpq7pn6ecdo" path="res://wall_shelf_produce.tscn" id="3_m0vbu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wk0h0"]
+albedo_color = Color(1, 0.99607843, 0.9411765, 1)
+metallic = 0.3
+roughness = 0.6
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ymlho"]
+size = Vector3(20, 0.1, 25)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_di5lt"]
+albedo_color = Color(1, 0.84313726, 0, 1)
+emission_enabled = true
+emission = Color(1, 0.84313726, 0, 1)
+emission_energy_multiplier = 3.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_paa5y"]
+albedo_color = Color(0.39607844, 0.2627451, 0.12941177, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m0vbu"]
+albedo_color = Color(0.23529412, 0.23529412, 0.23529412, 1)
+metallic = 0.1
+roughness = 0.8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ymlho"]
+albedo_color = Color(0.65882355, 0.65882355, 0.65882355, 1)
+metallic = 0.9
+roughness = 0.3
+
+[sub_resource type="Curve3D" id="Curve3D_m0vbu"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, -37.5, 0, 0, 0, 0, 0, 0, 0, 0, -25, 0, 0, 0, 0, 0, 0, 0, 0, -12.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16.5, 0, 0, 0, 0, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 0, 40.5),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2lrcq"]
+albedo_color = Color(1, 1, 0, 1)
+emission_enabled = true
+emission = Color(1, 1, 0, 1)
+emission_energy_multiplier = 1.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gsrpd"]
+albedo_color = Color(0, 1, 0, 1)
+emission_enabled = true
+emission = Color(0, 1, 0, 1)
+emission_energy_multiplier = 1.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ha3cb"]
+albedo_color = Color(0, 0, 1, 1)
+emission_enabled = true
+emission = Color(0, 0, 1, 1)
+emission_energy_multiplier = 1.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w2tct"]
+albedo_color = Color(1, 0, 0, 1)
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 1.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_773w3"]
+albedo_color = Color(0.627451, 0.1254902, 0.9411765, 1)
+emission_enabled = true
+emission = Color(0.627451, 0.1254902, 0.9411765, 1)
+emission_energy_multiplier = 1.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nkoq1"]
+albedo_color = Color(0, 0, 0, 1)
+emission_enabled = true
+emission_energy_multiplier = 1.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xud5b"]
+albedo_color = Color(0.29803923, 0.6862745, 0.3137255, 0.003921569)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ygsyb"]
+size = Vector3(5, 0.02, 75)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m0vbu"]
+size = Vector3(6, 0.01, 5)
+
+[node name="Store" type="Node"]
+
+[node name="YellowZone" type="Node3D" parent="."]
+
+[node name="Environment" type="Node" parent="YellowZone"]
+
+[node name="Floor" type="CSGBox3D" parent="YellowZone/Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.527672, 0, 23.880066)
+size = Vector3(20, 0.01, 25)
+material = SubResource("StandardMaterial3D_wk0h0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="YellowZone/Environment/Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="YellowZone/Environment/Floor/StaticBody3D"]
+shape = SubResource("BoxShape3D_ymlho")
+
+[node name="Front_Right_Wall" type="CSGBox3D" parent="YellowZone/Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.528, 5, 23.88)
+size = Vector3(0.05, 10, 25)
+
+[node name="Front_Right_Wall2" type="CSGBox3D" parent="YellowZone/Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.601, 5, 36.534)
+size = Vector3(20, 10, 0.05)
+
+[node name="Shelves" type="Node" parent="YellowZone/Environment"]
+
+[node name="Shelf1" parent="YellowZone/Environment/Shelves" instance=ExtResource("1_h0v27")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.527672, 0, 14.880066)
+
+[node name="Shelf2" parent="YellowZone/Environment/Shelves" instance=ExtResource("1_h0v27")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.527672, 0, 20.880066)
+
+[node name="Shelf3" parent="YellowZone/Environment/Shelves" instance=ExtResource("1_h0v27")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.527672, 0, 26.880066)
+
+[node name="Shelf4" parent="YellowZone/Environment/Shelves" instance=ExtResource("1_h0v27")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.527672, 0, 32.880066)
+
+[node name="DeliCases" type="Node" parent="YellowZone/Environment"]
+
+[node name="DeliCase_Bakery" parent="YellowZone/Environment/DeliCases" instance=ExtResource("2_22d2w")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 21.527672, 0, 15.880066)
+
+[node name="DeliCase_Bakery2" parent="YellowZone/Environment/DeliCases" instance=ExtResource("2_22d2w")]
+transform = Transform3D(-0.99999994, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -0.99999994, 21.527672, 0, 22.880066)
+
+[node name="NeonBorder_Front" type="CSGBox3D" parent="YellowZone/Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.527672, 0, 36.380066)
+size = Vector3(20, 0.02, 0.2)
+material = SubResource("StandardMaterial3D_di5lt")
+
+[node name="NeonBorder_Back" type="CSGBox3D" parent="YellowZone/Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.527672, 0, 11.380066)
+size = Vector3(20, 0.02, 0.2)
+material = SubResource("StandardMaterial3D_di5lt")
+
+[node name="NeonBorder_Left" type="CSGBox3D" parent="YellowZone/Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5276737, 0, 23.880066)
+size = Vector3(0.2, 0.02, 25)
+material = SubResource("StandardMaterial3D_di5lt")
+
+[node name="NeonBorder_Right" type="CSGBox3D" parent="YellowZone/Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.527672, 0, 23.880066)
+size = Vector3(0.2, 0.02, 25)
+material = SubResource("StandardMaterial3D_di5lt")
+
+[node name="WallShelfProduce" parent="YellowZone/Environment" instance=ExtResource("3_m0vbu")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 21.527672, 0, 31.880066)
+
+[node name="CartTrack" type="Node3D" parent="."]
+
+[node name="RailTies" type="Node3D" parent="CartTrack"]
+
+[node name="RailTie_01" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, -36)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_02" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, -34)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_03" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, -32)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_04" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, -30)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_05" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, -28)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_06" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, -26)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_07" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, -24)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_08" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, -22)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_09" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, -20)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_10" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, -18)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_11" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, -16)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_12" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, -14)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_13" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, -12)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_14" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, -10)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_15" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, -8)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_16" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, -6)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_17" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, -4)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_18" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, -2)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_19" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, 0)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_20" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, 2)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_21" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, 4)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_22" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, 6)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_23" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, 8)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_24" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, 10)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_25" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, 12)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_26" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, 14)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_27" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, 16)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_28" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, 18)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_29" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, 20)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_30" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, 22)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_31" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, 24)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_32" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, 26)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_33" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, 28)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_34" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, 30)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_35" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, 32)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_36" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, 34)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="RailTie_37" type="CSGBox3D" parent="CartTrack/RailTies"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, 36)
+size = Vector3(4.2, 0.03, 0.2)
+material = SubResource("StandardMaterial3D_paa5y")
+
+[node name="Track_Surface" type="CSGBox3D" parent="CartTrack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
+size = Vector3(5, 0.01, 75)
+material = SubResource("StandardMaterial3D_m0vbu")
+
+[node name="Rail_Left" type="CSGBox3D" parent="CartTrack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.015, 0)
+size = Vector3(0.1, 0.05, 75)
+material = SubResource("StandardMaterial3D_ymlho")
+
+[node name="Rail_Right" type="CSGBox3D" parent="CartTrack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.015, 0)
+size = Vector3(0.1, 0.05, 75)
+material = SubResource("StandardMaterial3D_ymlho")
+
+[node name="CartPath" type="Path3D" parent="CartTrack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+curve = SubResource("Curve3D_m0vbu")
+
+[node name="ZoneDivider_Yellow" type="CSGBox3D" parent="CartTrack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 0.012, 11)
+size = Vector3(2.5, 0.02, 0.3)
+material = SubResource("StandardMaterial3D_2lrcq")
+
+[node name="ZoneDivider_Green" type="CSGBox3D" parent="CartTrack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 0.012, 11)
+size = Vector3(2.5, 0.02, 0.3)
+material = SubResource("StandardMaterial3D_gsrpd")
+
+[node name="ZoneDivider_Blue" type="CSGBox3D" parent="CartTrack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 0.012, -1)
+size = Vector3(2.5, 0.02, 0.3)
+material = SubResource("StandardMaterial3D_ha3cb")
+
+[node name="ZoneDivider_Red" type="CSGBox3D" parent="CartTrack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 0.012, -1)
+size = Vector3(2.5, 0.02, 0.3)
+material = SubResource("StandardMaterial3D_w2tct")
+
+[node name="ZoneDivider_Purple" type="CSGBox3D" parent="CartTrack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 0.012, -37)
+size = Vector3(2.5, 0.02, 0.3)
+material = SubResource("StandardMaterial3D_773w3")
+
+[node name="ZoneDivider_Black" type="CSGBox3D" parent="CartTrack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 0.012, -37)
+size = Vector3(2.5, 0.02, 0.3)
+material = SubResource("StandardMaterial3D_nkoq1")
+
+[node name="CartParking_Front" type="CSGBox3D" parent="CartTrack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.005, 40)
+size = Vector3(6, 0.01, 5)
+material = SubResource("StandardMaterial3D_xud5b")
+
+[node name="TrackCollision" type="StaticBody3D" parent="CartTrack"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="TrackShape" type="CollisionShape3D" parent="CartTrack/TrackCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
+shape = SubResource("BoxShape3D_ygsyb")
+
+[node name="StartingAreaShape" type="CollisionShape3D" parent="CartTrack/TrackCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.005, 40)
+shape = SubResource("BoxShape3D_m0vbu")
